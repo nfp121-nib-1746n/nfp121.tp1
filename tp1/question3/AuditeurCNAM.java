@@ -1,5 +1,5 @@
 package question3;
-
+import java.lang.*;
 /**
  * NFP121 TpIntroduction, usage de BlueJ et du "Submitter".
  * 
@@ -10,6 +10,7 @@ package question3;
 public class AuditeurCNAM {
     /** l'attribut nom de chaque auditeur. */
     private String nom;
+    private String pass;
     /** l'attribut prenom de chaque auditeur. */
     private String prenom;
     /** l'attribut matricule de chaque auditeur. */
@@ -30,6 +31,7 @@ public class AuditeurCNAM {
         this.nom = nom;
         this.prenom = prenom;
         this.matricule = matricule;
+        pass="hello";
     }
 
     /**
@@ -45,7 +47,12 @@ public class AuditeurCNAM {
      *         homonymes...
      */
     public String login() {
-        return "";// à compléter
+      
+
+           
+          pass=nom.substring(0,6)+"-"+Character.toString(prenom.charAt(0));
+
+        return   pass.toLowerCase();// à compléter
     }
 
     /**
@@ -54,7 +61,7 @@ public class AuditeurCNAM {
      * @return son nom
      */
     public String nom() {
-        return null;// à compléter
+        return nom;// à compléter
     }
 
     /**
@@ -63,7 +70,7 @@ public class AuditeurCNAM {
      * @return son prénom
      */
     public String prenom() {
-        return null;// à compléter
+        return prenom;// à compléter
     }
 
     /**
@@ -72,7 +79,7 @@ public class AuditeurCNAM {
      * @return son matricule
      */
     public String matricule() {
-        return null;// à compléter
+        return matricule;// à compléter
     }
 
     /**

@@ -1,5 +1,6 @@
 package question2;
 
+
 import question1.Circle;
 import question1.Square;
 import question1.Triangle;
@@ -16,22 +17,27 @@ import question1.Triangle;
  * @version 1.1 (24 May 2001)
  */
 public class Picture {
+  
     private Square wall;
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Circle sun2;
+    private String color;
+     private boolean isVisible;
 
     /**
      * Constructor for objects of class Picture
      */
     public Picture() {
-        // nothing to do... instance variables are automatically set to null
+        
+    
     }
 
     /**
      * Draw this picture.
      */
-    public void draw() {
+  public void draw() {
         wall = new Square();
         wall.moveVertical(80);
         wall.changeSize(100);
@@ -50,11 +56,19 @@ public class Picture {
         roof.makeVisible();
 
         sun = new Circle();
-        sun.changeColor("yellow");
+        sun.changeColor("blue");
         sun.moveHorizontal(180);
         sun.moveVertical(-10);
         sun.changeSize(60);
         sun.makeVisible();
+        
+        sun2 = new Circle();
+        sun2.changeColor("yellow");
+        sun2.moveHorizontal(100);
+        sun2.moveVertical(-20);
+        sun2.changeSize(40);
+        sun2.makeVisible();
+       
     }
 
     /**
@@ -73,7 +87,7 @@ public class Picture {
     /**
      * Change this picture to use color display
      */
-    public void setColor() {
+    public void setColor(String newColor) {
         if (wall != null) // only if it's painted already...
         {
             wall.changeColor("red");
@@ -81,6 +95,21 @@ public class Picture {
             roof.changeColor("green");
             sun.changeColor("yellow");
         }
+        /**
+     * Change the color. Valid colors are "red", "yellow", "blue", "green",
+     * "magenta" and "black".
+     */
+    
+        color = newColor;
+        sun.changeColor(color);
+      
+  
     }
 
+    /**
+     * Slowly move the circle vertically by 'distance' pixels.
+     */
+    public void slowMoveVertical(int distance) {
+        sun.slowMoveVertical(distance);
+    }
 }
