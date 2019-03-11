@@ -25,7 +25,7 @@ public class Picture {
     private Circle sun2;
     private String color;
      private boolean isVisible;
-
+private boolean laTerreEstFixe = true;
     /**
      * Constructor for objects of class Picture
      */
@@ -111,5 +111,20 @@ public class Picture {
      */
     public void slowMoveVertical(int distance) {
         sun.slowMoveVertical(distance);
+    }
+      public void setlaterrnofixe(){
+        if(!laTerreEstFixe){
+            laTerreEstFixe = true;
+            sun.slowMoveVertical(-220);
+            
+        }
+
+}
+ public void setlaterrFixe(){
+        if(laTerreEstFixe){
+            laTerreEstFixe = false;
+            sun.slowMoveVertical(220);
+            
+        }
     }
 }

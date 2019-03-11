@@ -7,4 +7,5 @@ Ceci est le fichier LISEZMOI (README) du projet.  Décrivez-y votre projet. Dite
 ## VERSION ou DATE :
 ## COMMENT INVOQUER CE PROJET :
 ## AUTEURS :
-## INSTRUCTIONS À L'USAGER : heloo
+## INSTRUCTIONS À L'USAGER : 
+## hello
